@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.slim.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"/>
     <title>myPortfolio</title>
 </head>
 <body>
@@ -84,10 +90,146 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="skills">
+        <div class="container">
+            <div class="special-title">
+                <h2>My Skills</h2>
+                <p>what i know</p>
+            </div>
+            <div class="skills-content">
+                <div class="text">
+                    <div class="title">My creative skills & experiences.</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum eveniet doloremque autem excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus accusamus alias fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.</p>
+                    <a href="#" class="button">Download CV</a>
+                </div>
+                <div class="skills-div">
+                    <h1 class="skills-tilte">Skills</h1>
+                    <dl class="skills-list">
+                        <dt class="skill-name">Html</dt>
+                        <dd class="skill-percent skill-percent-html" data-percent="90%"></dd>
+                        <dt class="skill-name">Css</dt>
+                        <dd class="skill-percent skill-percent-css" data-percent="70%"></dd>
+                        <dt class="skill-name">Javascript</dt>
+                        <dd class="skill-percent skill-percent-javascript" data-percent="80%"></dd>
+                        <dt class="skill-name">Flutter</dt>
+                        <dd class="skill-percent skill-percent-flutter" data-percent="85%"></dd>
+
+
+
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="teams">
+        <div class="container">
+            <div class="special-title">
+                <h2>My Teams</h2>
+                <p>who whith me</p>
+            </div>
+            <div class="teams-content owl-carousel">
+                <div class="card">
+                    <div class="box">
+                        <img src="images/profile-1.jpeg" alt="">
+                        <div class="text">Someone name</div>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/profile-2.jpeg" alt="">
+                        <div class="text">Someone name</div>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/profile-3.jpeg" alt="">
+                        <div class="text">Someone name</div>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/profile-4.jpeg" alt="">
+                        <div class="text">Someone name</div>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/profile-5.jpeg" alt="">
+                        <div class="text">Someone name</div>
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
         
+    </div>
+    <div class="contact">
+        <div class="container">
+            <div class="special-title">
+                <h2>Contact Me</h2>
+                <p>get in touch</p>
+            </div>
+            <div class="contact-content">
+                <div class="text">
+                    <div class="title">Get in Touch.</div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum corporis fuga corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Mahmoud Ahmed</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Surkhet, Nepal</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">abc@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form">
+                    <div class="title">Message me</div>
+                    <div class="inputs">
+                        <div class="first">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea cols="30" rows="10" placeholder="Meassge.." required=""></textarea>
+                        <a href="#" class="button">Send Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="test"></div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

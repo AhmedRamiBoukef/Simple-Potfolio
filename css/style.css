@@ -198,41 +198,51 @@ footer {
     left: -45px;
     z-index: -1;
 }
-.about .about-content {
+.about .about-content,.skills .skills-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
     grid-gap: 20px;
     margin-top: 40px;
+}
+@media (max-width: 1199px) {
+    .about .about-content,.skills .skills-content {
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    }
+    }
+.about .about-content .image {
+    width: 400px;
 }
 .about .about-content .image img {
     height: 400px;
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
+    display: inline-block;
 }
-.about .about-content .text {
+.about .about-content .text,.skills .skills-content .text,.contact .contact-content .text {
     text-align: start;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    
 }
 
-.about .about-content .text .title {
+.about .about-content .text .title,.skills .skills-content .text .title,.contact .contact-content .text .title {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
     text-align: start;
     
 }
-.about .about-content .text p {
+.about .about-content .text p,.skills .skills-content .text p,.contact .contact-content .text p {
     text-align: justify;
 }
 .typing-1 ,.typed-cursor {
     color: crimson;
 }
 @media (max-width: 991px) {
-    .about .about-content .text {
+    .about .about-content .text,.skills .skills-content .text,.contact .contact-content .text {
         align-items: center;
     }
     .about .about-content .image {
@@ -241,38 +251,38 @@ footer {
     }
 }
 
-.services {
+.services,.teams {
     background-color: #111;
     padding: 100px 0;
 }
-.services .special-title h2 {
+.services .special-title h2,.teams .special-title h2 {
     color: #fff;
 }
-.services .special-title {
+.services .special-title,.teams .special-title {
     font-weight: 500;
     margin-bottom: 50px;
     font-family: 'Ubuntu', sans-serif;
 }
-.services .special-title p {
+.services .special-title p,.teams .special-title p {
     background-color: #111;
 }
-.services .special-title p span {
+.services .special-title p span,.teams .special-title p {
     z-index: 1;
 }
-.services .special-title p::before {
+.services .special-title p::before,.teams .special-title p::before {
     background: #fff;
     z-index: 0;
 }
 .services .services-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 20px;
 }
 .services .services-content .box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.3s ease;
 }
 .services .services-content .box i {
     font-size: 50px;
@@ -290,11 +300,157 @@ footer {
 }
 .services .services-content .card {
     background: #222;
-    width: calc(33% - 20px);
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover i {
+    color: #fff;
+}
+.services .services-content .card:hover {
+    background-color: crimson;
+}
+.services .services-content .card:hover .box {
+    transform: scale(1.05);
+}
+.skills,.contact {
+    padding: 80px 0;
+}
+.skills .skills-content .text .title {
+    font-size: 20px;
+}
+.skills .special-title p::before {
+    width: calc(100% + 50px );
+    left: -25px;
+}
+.skills-title {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.skill-name::after {
+    background-color: #999797;
+    content: "";
+    display: block;
+    height: 1rem;
+    position: relative;
+    top: 3px;
+    width: 100%;
+}
+
+.skill-percent {
+    font-size: 0;
+    height: 1rem;
+    position: relative;
+    top: -0.8rem;
+    transition: 3s linear;
+    width: 0;
+}
+
+.skill-percent-html {
+    background-color: #ff5c00;
+}
+
+.skill-percent-css {
+    background-color: #00b1db;
+}
+
+.skill-percent-javascript {
+    background-color: #ffc100;
+}
+
+.skill-percent-flutter {
+    background-color: #00ff59;
+}
+.teams .teams-content .card {
+    background: #222;
+    text-align: center;
+    color: #fff;
+    border-radius: 6px;
+    padding: 25px 35px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.teams .teams-content .card:hover {
+    transform: scale(1.05);
+    background-color: crimson;
+}
+.teams .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.teams .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams .teams-content img {
+    height: 150px;
+    width: 150px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline-block;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.teams .card:hover img {
+    border-color: white;
+}
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid crimson !important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,.owl-dot:hover {
+    background-color: crimson !important;
+}
+.contact .contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 20px;
+    margin-top: 40px;
+}
+.contact .contact-content .icons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.contact .contact-content .icons .row {
+    display: flex;
+    align-items: center;
+    height: 65px;
+}
+.contact .contact-content .icons .row i {
+    font-size: 25px;
+    color: crimson;
+    margin-right: 30px;
+}
+.contact .contact-content .icons .row .head {
+    font-weight: 500;
+    
+}
+.contact .contact-content .form .title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 .test {
     height: 500px;

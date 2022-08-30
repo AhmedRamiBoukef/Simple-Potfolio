@@ -22,4 +22,36 @@ $(document).ready(function() {
         backSpeed:60,
         loop:true,
     })
+    $('.skill-percent').each(function() {
+
+        $(this).animate({
+            width: $(this).attr('data-percent')
+
+
+        })
+
+    });
+    $(".teams-content").owlCarousel({
+
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeOut: 1000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+
+            },
+            992: {
+                items: 3
+
+            }
+
+        }
+
+    });
 })
