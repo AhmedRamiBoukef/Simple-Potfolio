@@ -5,6 +5,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html {
+    scroll-behavior: smooth;
+}
 .about,
 .services,
 .skills,
@@ -35,6 +38,34 @@ footer {
 .container {
     width: 1170px;
 }
+}
+
+.scroll-up {
+    height: 45px;
+    width:  42px;
+    background-color: crimson;
+    border-radius: 6px;
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+    color: white;
+    text-align: center;
+    line-height: 45px;
+    font-size: 30px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+.scroll-up.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up:hover {
+    filter: brightness(90%);
 }
 .navbar {
     position: fixed;
@@ -452,6 +483,76 @@ footer {
     font-weight: 600;
     margin-bottom: 10px;
 }
-.test {
-    height: 500px;
+.contact .contact-content .form .inputs {
+    display: grid;
+    grid-template-rows: repeat(auto-fill,minamx(300px,1fr));
+    gap: 20px;
+}
+.contact .contact-content .form .inputs .first {
+    display: grid;
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+    gap: 20px;
+}
+.contact .contact-content .form .inputs input,.contact .contact-content .form .inputs textarea {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    padding: 0 15px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+.contact .contact-content .form .inputs input:focus,.contact .contact-content .form .inputs textarea:focus {
+    border-color: crimson;
+}
+.contact .contact-content .form .inputs textarea{
+    resize: none;
+}
+.contact .contact-content .form .button {
+    text-align: center;
+}
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 15px 23px;
+    text-align: center;
+}
+.teams .title,.services .special-title .title {
+    color: white;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'ubuntu', sans-serif;
+}
+.teams .title::before,.services .special-title .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    transform: translate(-50%);
+}
+
+.teams .title::after,.services .special-title .title::after {
+    content: "who whith me";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #111;
+    transform: translate(-50%);
+}
+.services .special-title .title::after {
+    content: "what i provide";
+}
+footer span {
+    color: crimson;
 }

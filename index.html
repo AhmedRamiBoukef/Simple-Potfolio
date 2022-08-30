@@ -8,16 +8,13 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"/>
     <title>myPortfolio</title>
 </head>
 <body>
+    <div class="scroll-up"><i class="fas fa-angle-up"></i></div>
     <nav class="navbar">
         <div class="container">
             <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
@@ -34,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <div class="home">
+    <div class="home" id="home">
         <div class="container">
             <div class="text">
                 <div class="text1">Hello, my name is</div>
@@ -44,7 +41,7 @@
             <a href="#" class="button">Hire me</a>
         </div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
         <div class="container">
             <div class="special-title">
                 <h2>About me</h2>
@@ -60,11 +57,10 @@
             </div>
         </div>
     </div>
-    <div class="services">
+    <div class="services" id="services">
         <div class="container">
             <div class="special-title">
-                <h2>My Services</h2>
-                <p><span>what i provide</span></p>
+                <h2 class="title">Services</h2>
             </div>
             <div class="services-content">
                 <div class="card">
@@ -91,7 +87,7 @@
             </div>
         </div>
     </div>
-    <div class="skills">
+    <div class="skills" id="skills">
         <div class="container">
             <div class="special-title">
                 <h2>My Skills</h2>
@@ -123,11 +119,10 @@
             </div>
         </div>
     </div>
-    <div class="teams">
+    <div class="teams" id="teams">
         <div class="container">
-            <div class="special-title">
-                <h2>My Teams</h2>
-                <p>who whith me</p>
+            <div class="special-titl">
+                <h2 class="title">My Teams</h2>
             </div>
             <div class="teams-content owl-carousel">
                 <div class="card">
@@ -179,7 +174,7 @@
         </div>
         
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="container">
             <div class="special-title">
                 <h2>Contact Me</h2>
@@ -228,7 +223,7 @@
             </div>
         </div>
     </div>
-    <div class="test"></div>
+    <footer>Created By <span>Rami</span> | &copy; 2022 All rights resevered</footer>
 
     <script src="script.js" defer></script>
 </body>
