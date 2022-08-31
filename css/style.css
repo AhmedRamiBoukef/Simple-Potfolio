@@ -454,9 +454,16 @@ footer {
 }
 .contact .contact-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
     grid-gap: 20px;
     margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 1200) {
+    .contact .contact-content .text {
+        text-align: center;
+    }
 }
 .contact .contact-content .icons {
     display: flex;
